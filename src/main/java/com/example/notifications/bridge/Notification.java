@@ -1,0 +1,16 @@
+package com.example.notifications.bridge;
+
+
+public abstract class Notification {
+    protected Platform platform;
+
+    protected Notification(Platform platform) {
+        this.platform = platform;
+    }
+
+    public void setPlatform(Platform platform) {
+        this.platform = platform;
+    }
+
+    public abstract void send(String message);
+}
